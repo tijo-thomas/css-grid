@@ -13,19 +13,23 @@
 header {
     grid-column-start: 1; /* Marks the grid line # on left edge of column. */
     grid-column-end: -1; /* -1 allows item to stretch to end of last column. */
+    grid-column: 1 / -1;
 }
 
 main {
-    grid-row-start: 2;
-    grid-row-end: 3;
+    /* grid-row-start: 2;
+    grid-row-end: 3; */
+    grid-row: 2 / 3; /* Shorthand for above two lines. */
 }
 
 aside {
-    grid-row-start: 2;
-    grid-row-end: -1;
+    /* grid-row-start: 2;
+    grid-row-end: -1; */
+    grid-row: 2 / -1; /* Shorthand for above two lines. */
 }
 
 footer {
-    grid-row-start: -3;
-    grid-row-end: -1;
+    /* grid-row-start: -3;
+    grid-row-end: -1; */
+    grid-row: -3 / -1; /* Shorthand for above two lines. */
 }
