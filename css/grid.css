@@ -5,13 +5,15 @@
 .container {
     height: 100vh; /* Sets up the sticky footer. */
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 100px minmax(200px, 1fr) 100px;
+    grid-template-columns: 1fr; /* Sets up mobile 1 column layout. */
+    grid-auto-rows: minmax(150px, auto); /* Gives you control over size of implicit row tracks. */
     grid-gap: 10px;
     grid-template-areas: 
-        "header header header" 
-        "nav main aside" 
-        "nav footer footer";
+        "header" 
+        "nav" 
+        "main"
+        "aside"
+        "footer";
 }
 
 header {
@@ -44,4 +46,31 @@ footer {
     grid-row-end: -1; */
     /* grid-row: -3 / -1; Shorthand for above two lines. */
     grid-area: footer;
+}
+
+@media (min-width: 768px) {
+    
+    .container {
+        grid-template-columns: 1fr 2fr 1fr;
+
+        /* Sets height of row tracks. */
+        grid-template-rows: 100px minmax(150px, auto) 100px;
+        /* Sets layout on large screens. */
+        grid-template-areas: 
+            "header header header"
+            "nav main aside"
+            "footer footer footer";
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .container {
+        grid-template-areas: 
+            "header header header"
+            "nav main aside"
+            "nav footer footer";
+    }
+
 }
