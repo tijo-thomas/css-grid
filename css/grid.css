@@ -2,11 +2,6 @@
     GRID LAYOUT
 ==================================== */
 
-.grid {
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Determines # of columns based on available space. */
-    grid-template-rows: 100px 100px;
-    grid-gap: 15px; /* Sets column gutter. */
-    grid-auto-rows: minmax(150px, auto);
+.container {
+    
 }
