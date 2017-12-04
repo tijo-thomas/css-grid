@@ -5,13 +5,13 @@
 .container {
     height: 100vh; /* Sets up the sticky footer. */
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 100px minmax(200px, 1fr) 100px;
     grid-gap: 10px;
     grid-template-areas: 
-        "header header" 
-        "main aside" 
-        "footer footer";
+        "header header header" 
+        "nav main aside" 
+        "nav footer footer";
 }
 
 header {
@@ -19,6 +19,10 @@ header {
     /* grid-column-end: -1; -1 allows item to stretch to end of last column. */
     /* grid-column: 1 / -1; */
     grid-area: header;
+}
+
+nav {
+    grid-area: nav;
 }
 
 main {
