@@ -3,5 +3,19 @@
 ==================================== */
 
 .container {
-    
+    height: 100vh; /* Sets up the sticky footer. */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px minmax(200px, 1fr) 100px;
+    grid-gap: 10px;
+}
+
+header {
+    grid-column-start: 1; /* Marks the grid line # on left edge of column. */
+    grid-column-end: 3; /* Marks the grid line # on right edge of column. */
+}
+
+footer {
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
